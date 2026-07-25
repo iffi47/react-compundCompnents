@@ -9,6 +9,7 @@ export default function SearchableList({ items, itemKeyFn, children }) {
       clearTimeout(lastChage.current)
     }
     lastChage.current = setTimeout(() => {
+      lastChage.current = null;
       setSearchTerm(event.target.value);
     }, 500)
   }
